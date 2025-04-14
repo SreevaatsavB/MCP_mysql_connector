@@ -1,0 +1,5 @@
+anthropic
+mcp
+python-dotenv
+mysqlclient
+mcp[cli]

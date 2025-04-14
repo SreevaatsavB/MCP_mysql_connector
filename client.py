@@ -327,7 +327,7 @@ async def main():
     client = MCPClient()
 
     # Get server path
-    server_path = "Downloads/MCP/mcp-mysql-server/sql_server.py"
+    server_path = "sql_server.py"
     if len(sys.argv) > 1:
         server_path = sys.argv[1]
     
