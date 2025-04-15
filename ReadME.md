@@ -15,7 +15,7 @@ This repo provides a set of tools that enable natural language queries against M
 - Database schema introspection for intelligent query planning
 - Read-only query execution with safety checks
 - Support for complex, multi-step database operations
-- Currently, this implementation uses local mysql database and communicates via stdio between the mcp server and client
+- Currently, this implementation uses **local mysql database and communicates via stdio between the mcp server and client**
 
 
 
@@ -24,6 +24,9 @@ This repo provides a set of tools that enable natural language queries against M
 1. Clone the repository
 
 2. Install required packages:
+
+    We use uv to install and run the applications, you are free to choose anything of your choice.
+
    ```
    uv pip install -r requirements.txt
 
@@ -64,8 +67,10 @@ uv run client.py
 
 ### Adding New Features
 
-To add new tools or resources to the server:
+To add new tools/resources or resources to the server:
 
-1. Define new functions with the `@mcp.tool()` or `@mcp.resource()` decorators
+1. To define new or change the exsiting ones, use the `@mcp.tool()` or `@mcp.resource()` decorators
 2. Implement the required functionality
 3. Restart the server for changes to take effect
+
+In this way, only the server will need to be maintained and client can plug in without any changes. 
