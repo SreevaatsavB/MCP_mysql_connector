@@ -73,4 +73,10 @@ To add new tools/resources or resources to the server:
 2. Implement the required functionality
 3. Restart the server for changes to take effect
 
-In this way, only the server will need to be maintained and client can plug in without any changes. 
+In this way, only the server must be maintained, and the client can plug in without any changes.
+
+
+
+### Scopes of improvement
+
+Support for running multiple queries concurrently in an asynchronous fashion will be added. Right now in V0, each query is executed one at a time. 
